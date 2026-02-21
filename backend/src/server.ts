@@ -4,9 +4,12 @@ import { graphqlHTTP } from "express-graphql";
 import { schema } from "./graphql/schema";
 import { resolvers } from "./graphql/resolvers";
 import { sequelize } from "./config/database";
+import { swaggerDocument } from "./swagger";
+import swaggerUi from "swagger-ui-express";
 
 import "./models/Comment";
 import "./models/Character";
+
 
 const app = express();
 
@@ -18,6 +21,12 @@ app.use("/graphql",
   rootValue: resolvers,
   graphiql: true
  })
+);
+
+app.use(
+ "/api-docs",
+ swaggerUi.serve,
+ swaggerUi.setup(swaggerDocument)
 );
 
 sequelize.sync().then(() => {
