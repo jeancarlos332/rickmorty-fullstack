@@ -1,0 +1,27 @@
+{
+  "name": "rickmorty-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.0",
+    "graphql": "^15.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.0.0"
+  }
+}
